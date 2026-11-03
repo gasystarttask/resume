@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "latex": {
+      "type": "http",
+      "url": "http://localhost:8011/mcp"
+    }
+  }
+}

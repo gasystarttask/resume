@@ -1,0 +1,414 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+% Utilisation de la police Helvetica
+\usepackage[scaled]{helvet}
+\renewcommand\familydefault{\sfdefault}
+
+% ------------------ Packages ------------------
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{fontawesome5}
+\usepackage{setspace}
+\usepackage{tabularx}
+\usepackage[none]{hyphenat}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{needspace}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+% ------------------ Colors ------------------
+% Charte alignée sur le portfolio rrahajason.space, assombrie pour l'impression
+% (texte >= 7:1 sur blanc, WCAG AAA ; trait >= 4.5:1 ; lisible en N&B)
+\definecolor{ink}{HTML}{0E1B20}          % --background (17.6:1)
+\definecolor{primary}{HTML}{285565}      % --primary #316476 assombri (8.2:1)
+\definecolor{primarylight}{HTML}{28708C} % --primary-light #5CB1CF assombri (5.6:1)
+\definecolor{darkgray}{HTML}{233A43}     % --surface
+\definecolor{lightgray}{HTML}{DDDDDD}
+\definecolor{pagenum}{HTML}{3B5D6A}      % --surface-elevated
+\hypersetup{colorlinks=true, urlcolor=primary, linkcolor=primary}
+
+% ------------------ Footer (page numbering) ------------------
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[C]{\small\color{pagenum} \thepage\ / \pageref{LastPage}}
+
+% ------------------ Section style ------------------
+\titleformat{\section}
+  {\large\bfseries\color{ink}}
+  {}
+  {0em}
+  {}
+  [\vspace{-0.8ex}{\color{primarylight}\rule{\textwidth}{2pt}}]
+
+\titleformat{\subsection}
+  {\bfseries\color{primary}}
+  {}
+  {0em}
+  {}
+
+\setlist[itemize]{noitemsep, topsep=2pt}
+
+% ------------------ Document ------------------
+\begin{document}
+
+% ================== HEADER ==================
+\begin{center}
+{\Huge \textbf{\color{ink}Rivo RAHAJASON}}
+
+\vspace{4pt}
+
+{\large \color{primary} Lead Développeur Full-Stack Senior --- .NET/C\#, React.js/TypeScript \& Cloud (Azure/AWS)}
+
+\vspace{6pt}
+
+\color{darkgray} \faPhone\  07 62 24 23 87 \quad
+\color{darkgray} \faEnvelope\ \href{mailto:rivo.rahajason@gmail.com}{rivo.rahajason@gmail.com} \quad
+\color{darkgray} \faLinkedin\ \href{https://linkedin.com/in/rivo-rahajason-524b1b74}{linkedin.com/in/rivo-rahajason-524b1b74}
+
+\vspace{10pt}
+
+\begin{minipage}{\textwidth}
+\small\color{darkgray}
+Développeur Full-Stack senior (10+ ans), spécialisé en développement back-end \textbf{.NET/C\#} et interfaces \textbf{React.js / TypeScript} pour applications d'entreprise et SaaS (dont une plateforme SaaS médicale en React.js/TypeScript et le projet Objective Pose, backend PHP / frontend React.js). Expertise cloud multi-provider (\textbf{Azure, AWS})~: Infrastructure as Code, CI/CD, conteneurisation et architecture microservices. Expérience complémentaire en Angular sur plusieurs projets d'entreprise chez TF1.
+\end{minipage}
+
+\vspace{16pt}
+\end{center}
+
+% ================== EXPÉRIENCE (pleine largeur) ==================
+\section*{EXPÉRIENCE}
+
+\needspace{11\baselineskip}
+\noindent\textcolor{primary}{ \faBuilding\ TF1} \quad
+\textit{ \small \textcolor{darkgray}{ \faMapMarker\ } Paris, France } \hfill
+\textit{ \small \textcolor{darkgray}{ \faCalendar\ } Juillet 2019 -- Octobre 2026 }
+
+\vspace{4pt}
+
+\subsection*{Lead Développeur Full-Stack .NET 10 --- Projet Dalet Reporter}
+\color{darkgray}
+Migration de .NET 4.7 vers .NET 10 et optimisation du service d'enrichissement de données depuis « Dalet Data Warehouse ».
+\begin{itemize}
+  \item Infrastructure cloud on-premise.
+  \item Conventions de code avec l'équipe (principe SOLID).
+  \item Base de données MS SQL Server.
+  \item Supervision de l'application et remontée des métriques vers Datadog.
+  \item Leadership technique~: animation de retours d'expérience techniques, montée en compétences de l'équipe et veille technologique.
+  \item Automatisation CI/CD.
+\end{itemize}
+\textit{Environnement technique~:} .NET 10, Service Background, MS SQL Server, Cloud on-premise, Azure DevOps, Confluence, Azure Git Repository, SOLID, TDD, Clean Code.
+
+\vspace{6pt}
+
+\subsection*{Lead Développeur Full-Stack .NET 10 --- Projet GMP}
+\color{darkgray}
+APIs REST pour la gestion des moyens de production du pôle Produit News (PPN) (.NET 10, Web API). Équipe de 6 personnes (Agile Scrum).
+\begin{itemize}
+  \item Infrastructure cloud AWS (IaC).
+  \item Conventions de code avec l'équipe (principe SOLID).
+  \item Base de données DynamoDB.
+  \item Suivi de la performance applicative via CloudWatch.
+  \item Leadership technique~: intégration (onboarding) des nouveaux arrivants.
+  \item Automatisation CI/CD.
+\end{itemize}
+\textit{Environnement technique~:} .NET 10, AWS DynamoDB, ECR/ECS, Cloud AWS, Docker, Azure DevOps, Confluence, Azure Git Repository, SOLID, TDD, Datadog, Terraform, Clean Code.
+
+\vspace{6pt}
+
+\subsection*{Lead Développeur Full-Stack .NET 10 / Angular 21 --- Projet PQR}
+\color{darkgray}
+Service d'automatisation d'envoi de bons de commande du pôle Produit News (PPN) et application web dédiée à la gestion d'annuaire des bureaux de Presse Quotidienne Régionale (.NET Core, Angular 21). Équipe de 6 personnes (Agile Scrum).
+\begin{itemize}
+  \item Infrastructure cloud AWS (IaC).
+  \item Conventions de code avec l'équipe (principe SOLID).
+  \item Base de données MS SQL Server.
+  \item Supervision de l'application et remontée des métriques vers Datadog.
+  \item Leadership technique~: présentation de retours d'expérience techniques auprès de l'équipe.
+  \item Automatisation CI/CD.
+\end{itemize}
+\textit{Environnement technique~:} Angular 21, .NET 10, PostgreSQL, Cloud AWS, Azure DevOps, Confluence, Azure Git Repository, SOLID, TDD, Datadog, Terraform, Clean Code.
+
+\vspace{6pt}
+
+\subsection*{Lead Développeur Full-Stack .NET 10 / Angular 21 --- Projet Gestion visiteurs}
+\color{darkgray}
+Application web dédiée à la gestion des visiteurs des locaux de TF1 (.NET Core, Angular 21). Équipe de 5 personnes (Agile Scrum).
+\begin{itemize}
+  \item Interfaces Front-Office (Angular) connectées à une WebAPI .NET Core C\#.
+  \item Conventions de code avec l'équipe (principe SOLID).
+  \item Infrastructure cloud Azure (IaaS, IaC).
+  \item Architecture en Domain Driven Design.
+  \item Base de données MS SQL Server (Azure).
+  \item Suivi applicatif avec Azure Application Insights.
+  \item Mise à jour des packages et des correctifs de sécurité.
+  \item Intégration de l'IAM OneId.
+  \item Leadership technique~: mentorat de profils juniors.
+  \item Automatisation CI/CD.
+\end{itemize}
+\textit{Environnement technique~:} Angular 21, .NET 10, PostgreSQL, Azure Cloud, Azure DevOps, Confluence, Azure Git Repository, SOLID, TDD, Terraform, Clean Code.
+
+\vspace{6pt}
+
+\subsection*{Lead Développeur Full-Stack .NET 8+ / Angular 18+ --- Projet OBI ONE}
+\color{darkgray}
+Application web dédiée à la gestion des jeux interactifs de TF1 (.NET Core, Angular 18+). Équipe de 7 personnes (Agile Scrum).
+\begin{itemize}
+  \item Infrastructure cloud Azure (IaaS, IaC).
+  \item Site web de gestion des jeux interactifs (.NET Core, Angular 18+).
+  \item Conventions de code avec l'équipe (principe SOLID).
+  \item Architecture en Domain Driven Design.
+  \item Développement en mode TDD.
+  \item Base de données PostgreSQL.
+  \item Suivi applicatif avec Azure Application Insights.
+  \item Interfaces Front-Office (Angular) connectées à une WebAPI .NET Core C\#.
+  \item Synchronisation automatique des données entre trois plateformes via des tâches web et fonctions Azure (PaaS).
+  \item Leadership technique~: développeur principal sur le projet.
+\end{itemize}
+\textit{Environnement technique~:} Angular 18+, .NET 8, PostgreSQL, Azure Cloud, Azure DevOps, Confluence, Azure Git Repository, SOLID, TDD, Clean Code.
+
+\vspace{6pt}
+
+\subsection*{Développeur Backend .NET Standard C\# --- Projet One Content Reprise}
+\color{darkgray}
+Migration des données d'une base de données Oracle vers MS SQL Server. Équipe de 6 personnes (Agile Scrum).
+\begin{itemize}
+  \item Conception d'une interface de migration de données entre deux bases hétérogènes, dans le respect des bonnes pratiques de codage (Clean Code).
+  \item Contrôle de la cohérence des développements (code review).
+  \item Mise en place d'Azure DevOps (Kanban, Repos, Pipelines).
+  \item Intégration et transformation de données.
+  \item Écriture de procédures stockées pour de meilleures performances.
+  \item Couverture de l'ensemble des développements par des tests.
+\end{itemize}
+\textit{Environnement technique~:} .NET Framework 4.7, MS SQL Server, Oracle PL/SQL, Azure DevOps, Azure Application Insights, principe SOLID, DDD, Clean Code, Clean Architecture, Software Craftsmanship.
+
+\vspace{10pt}
+
+\needspace{11\baselineskip}
+\noindent\textcolor{primary}{ \faBuilding\ Projet Open-source} \quad
+\textit{ \small \textcolor{darkgray}{ \faMapMarker\ } International } \hfill
+\textit{ \small \textcolor{darkgray}{ \faCalendar\ } 2024 -- Présent }
+
+\vspace{4pt}
+
+\subsection*{Mainteneur Mono Lingual LLM}
+\color{darkgray}
+\begin{itemize}
+  \item Génération de datasets pour l'entraînement de modèles de langage (LLM), améliorant la précision des réponses en contexte spécifique.
+  \item Développement de notebooks Python pour le fine-tuning (LoRA, QLoRA), optimisant l'utilisation de la mémoire GPU lors de l'entraînement.
+  \item Application de techniques de quantification (4, 8, 16 bits) sur les modèles, réduisant la latence d'inférence pour un déploiement sur matériel restreint.
+  \item Déploiement de modèles optimisés sur Hugging Face via la librairie Unsloth, augmentant l'efficacité du traitement des requêtes multimodales.
+\end{itemize}
+
+\vspace{10pt}
+
+\needspace{11\baselineskip}
+\noindent\textcolor{primary}{ \faBuilding\ Latro.link et yuniql} \quad
+\textit{ \small \textcolor{darkgray}{ \faMapMarker\ } International } \hfill
+\textit{ \small \textcolor{darkgray}{ \faCalendar\ } 2020 -- 2025 }
+
+\vspace{4pt}
+
+\subsection*{DevOps / Co-fondateur / Développeur Open-source --- React.js, Tailwind CSS, TypeScript}
+\color{darkgray}
+\begin{itemize}
+  \item Développement de solutions SaaS pour le secteur médical (React.js, Tailwind CSS, TypeScript), garantissant une interface ergonomique et performante.
+  \item Définition de l'architecture microservices pour isoler les composants critiques et assurer une haute disponibilité des services de santé.
+  \item Automatisation des cycles de déploiement et du monitoring (Ansible, GitHub Actions, Jenkins), atteignant un taux de disponibilité applicative de 99,9\%.
+\end{itemize}
+
+\vspace{10pt}
+
+\needspace{11\baselineskip}
+\noindent\textcolor{primary}{ \faBuilding\ Proximity IO} \quad
+\textit{ \small \textcolor{darkgray}{ \faMapMarker\ } Quatre Bornes, Maurice } \hfill
+\textit{ \small \textcolor{darkgray}{ \faCalendar\ } Octobre 2016 -- Juin 2019 }
+
+\vspace{4pt}
+
+\subsection*{Développeur C\# .NET Core 1.0, PHP, React JS --- Projet Smart}
+\color{darkgray}
+Application web permettant aux clients de personnaliser leur voiture Smart en choisissant le modèle et la couleur (parmi différentes options), avec une récapitulation téléchargeable au format PDF. Équipe de 3 personnes (Kanban).
+\begin{itemize}
+  \item Analyse des spécifications de l'API.
+  \item Développement d'une API web pour générer la récapitulation au format PDF.
+  \item Intégration de la vue (front-end).
+  \item Code review et déploiement.
+  \item Rédaction de la documentation technique.
+\end{itemize}
+\textit{Environnement technique~:} C\#, ASP.NET Web API 2.0, ASP.NET MVC Core, MS SQL Server 2017, WCF, RESTful API, Git, Jira, Confluence.
+
+\vspace{6pt}
+
+\subsection*{Développeur Backend C\# .NET 4.x, ASP.NET --- Projet Mercedes-Benz}
+\color{darkgray}
+Application web de contact pour les clients de Mercedes-Benz. Équipe de 4 personnes (Kanban).
+\begin{itemize}
+  \item Extraction, surveillance et analyse de données.
+  \item Développement, maintenance et tests.
+  \item Code review et déploiement.
+  \item Rédaction de la documentation technique.
+  \item Test unitaire et intégration.
+\end{itemize}
+\textit{Environnement technique~:} C\#, ASP.NET MVC 5 Razor, MS SQL Server 2012, SVN, TDD, Entity Framework.
+
+\vspace{6pt}
+
+\subsection*{Développeur Backend C\# .NET 4.x, ASP.NET --- Projet Janrain}
+\color{darkgray}
+Application web « Super Savvy Me » pour la vente de produits des marques P\&G. Équipe de 4 personnes (Kanban).
+\begin{itemize}
+  \item Développement de nouvelles fonctionnalités.
+  \item Code review et déploiement.
+  \item Paramétrage du back-office du CMS Sitecore 9.
+  \item Test unitaire et intégration.
+\end{itemize}
+\textit{Environnement technique~:} C\#, ASP.NET MVC 5, MS SQL Server 2012, Git, Sitecore 9 CMS, Entity Framework.
+
+\vspace{6pt}
+
+\subsection*{Développeur Backend PHP / Frontend React.js --- Projet Objective Pose}
+\color{darkgray}
+Application web pour l'évaluation des compétences des clients concernant l'installation de sols (avec différentes options). À la fin des étapes, une récapitulation et une suggestion sont proposées selon le niveau de compétence. Équipe de 4 personnes (Kanban).
+\begin{itemize}
+  \item Développement de l'UI du back-office en React JS.
+  \item Analyse des spécifications de l'API.
+  \item Développement d'une API web RESTful.
+  \item Participation aux choix techniques.
+  \item Code review et déploiement.
+  \item Rédaction de la documentation technique.
+\end{itemize}
+\textit{Environnement technique~:} React JS, PHP, Slim Framework, MariaDB, RESTful API, Git, Jira, Confluence.
+
+\vspace{6pt}
+
+\subsection*{Développeur Backend PHP --- Projet Krug}
+\color{darkgray}
+Application web commerciale pour la vente de champagne de la marque Krug. Équipe de 4 personnes (Kanban).
+\begin{itemize}
+  \item Développement de modules personnalisés pour le CMS Drupal 7.
+  \item Développement, maintenance et tests des services API REST.
+  \item Code review et déploiement.
+  \item Rédaction de la documentation technique.
+\end{itemize}
+\textit{Environnement technique~:} PHP, Drupal 7, MySQL, Git, Jenkins, Jira, Confluence.
+
+\vspace{6pt}
+
+\subsection*{Développeur Backend Node.js --- Projet Kaufman \& Broad Patrimoine}
+\color{darkgray}
+Application web B2B pour Kaufman \& Broad Patrimoine. Équipe de 8 personnes (Kanban).
+\begin{itemize}
+  \item Développement frontend d'une interface utilisateur.
+  \item Code review et déploiement.
+  \item Test unitaire et intégration.
+\end{itemize}
+\textit{Environnement technique~:} Node.js, Gulp, SASS, Pug, JavaScript, Git, Jira, Confluence.
+
+\vspace{10pt}
+
+\noindent\textcolor{primary}{ \faBuilding\ Vinatech} \quad
+\textit{ \small \textcolor{darkgray}{ \faMapMarker\ } Madagascar } \hfill
+\textit{ \small \textcolor{darkgray}{ \faCalendar\ } Juillet 2014 -- Août 2016 }
+
+\vspace{4pt}
+
+\subsection*{Ingénieur R\&D et cofondateur --- Projet Gestion de flotte}
+\color{darkgray}
+Application web et mobile permettant le traçage des véhicules. Équipe de 3 personnes.
+\begin{itemize}
+  \item Conception des produits digitaux.
+  \item Développement de l'interface web.
+  \item Développement de sockets pour recevoir les données GPS.
+  \item Prototypage électronique.
+  \item Rédaction de la documentation technique.
+  \item Prospection de clientèle locale.
+\end{itemize}
+\textit{Environnement technique~:} Java, Tomcat, Java Socket, Git, microcontrôleur PIC, C/C++.
+
+\vspace{10pt}
+
+\noindent\textcolor{primary}{ \faBuilding\ Laboratoire de Neuroscience} \quad
+\textit{ \small \textcolor{darkgray}{ \faMapMarker\ } Madagascar }
+
+\vspace{4pt}
+
+\subsection*{Ingénieur R\&D consultant --- Projet EEG}
+\color{darkgray}
+Application web de traitement semi-automatique des signaux EEG. Équipe de 3 personnes.
+\begin{itemize}
+  \item Conception des produits digitaux.
+  \item Développement de l'interface web.
+  \item Prototypage électronique.
+\end{itemize}
+\textit{Environnement technique~:} Python, CMS WordPress, Machine Learning.
+
+\vspace{14pt}
+
+% ================== ÉDUCATION / LANGUES / COMPÉTENCES (2 colonnes) ==================
+\setlength{\tabcolsep}{0pt}
+\begin{tabularx}{\textwidth}{
+  >{\raggedright\arraybackslash}X
+  @{\hspace{1cm}}
+  >{\raggedright\arraybackslash}p{0.32\textwidth}
+}
+\begin{minipage}[t]{\linewidth}
+\section*{ÉDUCATION}
+
+\textbf{Diplôme d'ingénieur en électronique automatique et informatique}\\
+\textcolor{primary}{ \faGraduationCap\ École Supérieure Polytechnique d'Antananarivo} \quad
+\textit{ \small \textcolor{darkgray}{ \faMapMarker\ } M/scar } \hfill  \textit{ \small \textcolor{darkgray}{ \faCalendar\ } 2014 }
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}
+
+\section*{LANGUES}
+
+\begin{itemize}
+  \item Français --- Courant
+  \item Anglais --- Professionnel
+\end{itemize}
+
+\section*{COMPÉTENCES}
+
+\textbf{\color{primary} Back-end}\\
+\color{darkgray} C\#, .NET 10, Node.js, Python, API REST, Web API
+
+\vspace{4pt}
+
+\textbf{\color{primary} Front-end}\\
+\color{darkgray} React.js, TypeScript, Angular 21/18/8, Next.js, RxJS, HTML/CSS
+
+\vspace{4pt}
+
+\textbf{\color{primary} Cloud \& DevOps}\\
+\color{darkgray} Multi-cloud (Azure PaaS/IaaS, AWS) --- Infrastructure as Code (Terraform), CI/CD, conteneurisation (Docker), microservices. Azure DevOps, Jenkins, GitHub Actions, Datadog
+
+\vspace{4pt}
+
+\textbf{\color{primary} IA \& Machine Learning}\\
+\color{darkgray} LLM, RAG (Retrieval-Augmented Generation), Fine-tuning Python (LoRA, QLoRA), Modèles Multimodaux, pgvector
+
+\vspace{4pt}
+
+\textbf{\color{primary} Architecture \& Méthodes}\\
+\color{darkgray} Clean Architecture, DDD, Microservices, MVC, SOLID, Agile (Scrum, Kanban), TDD
+
+\vspace{4pt}
+
+\textbf{\color{primary} Bases de données}\\
+\color{darkgray} PostgreSQL, MS SQL Server, DynamoDB, Entity Framework, MariaDB, MySQL, Oracle PL/SQL
+
+\vspace{4pt}
+
+\end{minipage}
+\\
+\end{tabularx}
+
+\end{document}

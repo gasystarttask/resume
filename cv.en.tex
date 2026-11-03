@@ -1,0 +1,402 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+% Utilisation de la police Helvetica
+\usepackage[scaled]{helvet}
+\renewcommand\familydefault{\sfdefault}
+
+% ------------------ Packages ------------------
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{fontawesome5}
+\usepackage{setspace}
+\usepackage{tabularx}
+\usepackage[none]{hyphenat}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{needspace}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+% ------------------ Colors ------------------
+% Charte alignée sur le portfolio rrahajason.space, assombrie pour l'impression
+% (texte >= 7:1 sur blanc, WCAG AAA ; trait >= 4.5:1 ; lisible en N&B)
+\definecolor{ink}{HTML}{0E1B20}          % --background (17.6:1)
+\definecolor{primary}{HTML}{285565}      % --primary #316476 assombri (8.2:1)
+\definecolor{primarylight}{HTML}{28708C} % --primary-light #5CB1CF assombri (5.6:1)
+\definecolor{darkgray}{HTML}{233A43}     % --surface
+\definecolor{lightgray}{HTML}{DDDDDD}
+\definecolor{pagenum}{HTML}{3B5D6A}      % --surface-elevated
+\hypersetup{colorlinks=true, urlcolor=primary, linkcolor=primary}
+
+% ------------------ Footer (page numbering) ------------------
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[C]{\small\color{pagenum} \thepage\ / \pageref{LastPage}}
+
+% ------------------ Section style ------------------
+\titleformat{\section}
+  {\large\bfseries\color{ink}}
+  {}
+  {0em}
+  {}
+  [\vspace{-0.8ex}{\color{primarylight}\rule{\textwidth}{2pt}}]
+
+\titleformat{\subsection}
+  {\bfseries\color{primary}}
+  {}
+  {0em}
+  {}
+
+\setlist[itemize]{noitemsep, topsep=2pt}
+
+% ------------------ Document ------------------
+\begin{document}
+
+% ================== HEADER ==================
+\begin{center}
+{\Huge \textbf{\color{ink}Rivo RAHAJASON}}
+
+\vspace{4pt}
+
+{\large \color{primary} Senior Lead Full-Stack Developer (.NET / Angular)}
+
+\vspace{6pt}
+
+\color{darkgray} \faPhone\  07 62 24 23 87 \quad
+\color{darkgray} \faEnvelope\ \href{mailto:rivo.rahajason@gmail.com}{rivo.rahajason@gmail.com} \quad
+\color{darkgray} \faLinkedin\ \href{https://linkedin.com/in/rivo-rahajason-524b1b74}{linkedin.com/in/rivo-rahajason-524b1b74}
+
+\vspace{22pt}
+\end{center}
+
+% ================== EXPERIENCE (full width) ==================
+\section*{EXPERIENCE}
+
+\needspace{11\baselineskip}
+\noindent\textcolor{primary}{ \faBuilding\ TF1} \quad
+\textit{ \small \textcolor{darkgray}{ \faMapMarker\ } Paris, France } \hfill
+\textit{ \small \textcolor{darkgray}{ \faCalendar\ } July 2019 -- October 2026 }
+
+\vspace{4pt}
+
+\subsection*{Lead Full-Stack Developer .NET 10 --- Dalet Reporter Project}
+\color{darkgray}
+Migration from .NET 4.7 to .NET 10 and optimization of the data enrichment service from the "Dalet Data Warehouse".
+\begin{itemize}
+  \item On-premise cloud infrastructure.
+  \item Coding conventions with the team (SOLID principles).
+  \item MS SQL Server database.
+  \item Application monitoring and metrics reporting to Datadog.
+  \item Technical leadership: led technical retrospectives, upskilled the team, and tracked emerging technologies.
+  \item CI/CD automation.
+\end{itemize}
+\textit{Tech Stack:} .NET 10, Background Service, MS SQL Server, On-premise Cloud, Azure DevOps, Confluence, Azure Git Repository, SOLID, TDD, Clean Code.
+
+\vspace{6pt}
+
+\subsection*{Lead Full-Stack Developer .NET 10 --- GMP Project}
+\color{darkgray}
+REST APIs for managing production resources for the News Product division (PPN) (.NET 10, Web API). 6-person team (Agile Scrum).
+\begin{itemize}
+  \item AWS cloud infrastructure (IaC).
+  \item Coding conventions with the team (SOLID principles).
+  \item DynamoDB database.
+  \item Application performance tracking via CloudWatch.
+  \item Technical leadership: onboarded new team members.
+  \item CI/CD automation.
+\end{itemize}
+\textit{Tech Stack:} .NET 10, AWS DynamoDB, ECR/ECS, AWS Cloud, Docker, Azure DevOps, Confluence, Azure Git Repository, SOLID, TDD, Datadog, Terraform, Clean Code.
+
+\vspace{6pt}
+
+\subsection*{Lead Full-Stack Developer .NET 10 / Angular 21 --- PQR Project}
+\color{darkgray}
+Automated purchase order sending service for the News Product division (PPN) and a web application dedicated to managing the branch directory of the Regional Daily Press (PQR) (.NET Core, Angular 21). 6-person team (Agile Scrum).
+\begin{itemize}
+  \item AWS cloud infrastructure (IaC).
+  \item Coding conventions with the team (SOLID principles).
+  \item MS SQL Server database.
+  \item Application monitoring and metrics reporting to Datadog.
+  \item Technical leadership: presented technical retrospectives to the team.
+  \item CI/CD automation.
+\end{itemize}
+\textit{Tech Stack:} Angular 21, .NET 10, PostgreSQL, AWS Cloud, Azure DevOps, Confluence, Azure Git Repository, SOLID, TDD, Datadog, Terraform, Clean Code.
+
+\vspace{6pt}
+
+\subsection*{Lead Full-Stack Developer .NET 10 / Angular 21 --- Visitor Management Project}
+\color{darkgray}
+Web application dedicated to managing visitors at TF1 premises (.NET Core, Angular 21). 5-person team (Agile Scrum).
+\begin{itemize}
+  \item Coding conventions with the team (SOLID principles).
+  \item Azure cloud infrastructure (IaaS, IaC).
+  \item Domain Driven Design architecture.
+  \item MS SQL Server (Azure) database.
+  \item Application tracking with Azure Application Insights.
+  \item Front-Office interfaces (Angular) connected to a .NET Core C\# WebAPI.
+  \item Package updates and security patches.
+  \item OneId IAM integration.
+  \item Technical leadership: mentored junior profiles.
+  \item CI/CD automation.
+\end{itemize}
+\textit{Tech Stack:} Angular 21, .NET 10, PostgreSQL, Azure Cloud, Azure DevOps, Confluence, Azure Git Repository, SOLID, TDD, Terraform, Clean Code.
+
+\vspace{6pt}
+
+\subsection*{Lead Full-Stack Developer .NET 8+ / Angular 18+ --- OBI ONE Project}
+\color{darkgray}
+Web application dedicated to managing TF1's interactive games (.NET Core, Angular 18+). 7-person team (Agile Scrum).
+\begin{itemize}
+  \item Azure cloud infrastructure (IaaS, IaC).
+  \item Website for managing interactive games (.NET Core, Angular 18+).
+  \item Coding conventions with the team (SOLID principles).
+  \item Domain Driven Design architecture.
+  \item TDD development.
+  \item PostgreSQL database.
+  \item Application tracking with Azure Application Insights.
+  \item Front-Office interfaces (Angular) connected to a .NET Core C\# WebAPI.
+  \item Automatic data synchronization across three platforms via Azure web jobs and functions (PaaS).
+  \item Technical leadership: lead developer on the project.
+\end{itemize}
+\textit{Tech Stack:} Angular 18+, .NET 8, PostgreSQL, Azure Cloud, Azure DevOps, Confluence, Azure Git Repository, SOLID, TDD, Clean Code.
+
+\vspace{6pt}
+
+\subsection*{Backend Developer .NET Standard C\# --- One Content Reprise Project}
+\color{darkgray}
+Migration of data from an Oracle database to MS SQL Server. 6-person team (Agile Scrum).
+\begin{itemize}
+  \item Designed an interface to migrate data between two heterogeneous databases, following coding best practices (Clean Code).
+  \item Reviewed development work for consistency (code review).
+  \item Set up Azure DevOps (Kanban, Repos, Pipelines).
+  \item Integrated and transformed data.
+  \item Wrote stored procedures for better performance.
+  \item Covered all development work with tests.
+\end{itemize}
+\textit{Tech Stack:} .NET Framework 4.7, MS SQL Server, Oracle PL/SQL, Azure DevOps, Azure Application Insights, SOLID Principle, DDD, Clean Code, Clean Architecture, Software Craftsmanship.
+
+\vspace{10pt}
+
+\needspace{11\baselineskip}
+\noindent\textcolor{primary}{ \faBuilding\ Open-source Project} \quad
+\textit{ \small \textcolor{darkgray}{ \faMapMarker\ } International } \hfill
+\textit{ \small \textcolor{darkgray}{ \faCalendar\ } 2024 -- Present }
+
+\vspace{4pt}
+
+\subsection*{Maintainer, Mono Lingual LLM}
+\color{darkgray}
+\begin{itemize}
+  \item Generated datasets for training language models (LLM), improving response accuracy in specific contexts.
+  \item Developed Python notebooks for fine-tuning (LoRA, QLoRA), optimizing GPU memory usage during training.
+  \item Applied quantization techniques (4, 8, 16 bits) to models, reducing inference latency for deployment on constrained hardware.
+  \item Deployed optimized models on Hugging Face via the Unsloth library, increasing the efficiency of processing multimodal requests.
+\end{itemize}
+
+\vspace{10pt}
+
+\needspace{11\baselineskip}
+\noindent\textcolor{primary}{ \faBuilding\ Latro.link and yuniql} \quad
+\textit{ \small \textcolor{darkgray}{ \faMapMarker\ } International } \hfill
+\textit{ \small \textcolor{darkgray}{ \faCalendar\ } 2020 -- 2025 }
+
+\vspace{4pt}
+
+\subsection*{DevOps / Co-founder / Open-source Developer --- React.js, Tailwind CSS, TypeScript}
+\color{darkgray}
+\begin{itemize}
+  \item Developed SaaS solutions for the medical sector (React.js, Tailwind CSS, TypeScript), delivering an ergonomic and high-performing interface.
+  \item Defined the microservices architecture to isolate critical components and ensure high availability of healthcare services.
+  \item Automated deployment cycles and monitoring (Ansible, GitHub Actions, Jenkins), achieving an application uptime rate of 99.9\%.
+\end{itemize}
+
+\vspace{10pt}
+
+\needspace{11\baselineskip}
+\noindent\textcolor{primary}{ \faBuilding\ Proximity IO} \quad
+\textit{ \small \textcolor{darkgray}{ \faMapMarker\ } Quatre Bornes, Mauritius } \hfill
+\textit{ \small \textcolor{darkgray}{ \faCalendar\ } October 2016 -- June 2019 }
+
+\vspace{4pt}
+
+\subsection*{Developer C\#/.NET Core 1.0, PHP, React JS --- Smart Project}
+\color{darkgray}
+Web application allowing customers to personalize their Smart car by choosing the model and color (among various options), with a downloadable summary in PDF format. 3-person team (Kanban).
+\begin{itemize}
+  \item Analyzed API specifications.
+  \item Developed a web API to generate the summary in PDF format.
+  \item Integrated the front-end view.
+  \item Performed code reviews and deployments.
+  \item Wrote technical documentation.
+\end{itemize}
+\textit{Tech Stack:} C\#, ASP.NET Web API 2.0, ASP.NET MVC Core, MS SQL Server 2017, WCF, RESTful API, Git, Jira, Confluence.
+
+\vspace{6pt}
+
+\subsection*{Backend Developer C\#/.NET 4.x, ASP.NET --- Mercedes-Benz Project}
+\color{darkgray}
+Web contact application for Mercedes-Benz customers. 4-person team (Kanban).
+\begin{itemize}
+  \item Extracted, monitored, and analyzed data.
+  \item Handled development, maintenance, and testing.
+  \item Performed code reviews and deployments.
+  \item Wrote technical documentation.
+  \item Carried out unit and integration testing.
+\end{itemize}
+\textit{Tech Stack:} C\#, ASP.NET MVC 5 Razor, MS SQL Server 2012, SVN, TDD, Entity Framework.
+
+\vspace{6pt}
+
+\subsection*{Backend Developer C\#/.NET 4.x, ASP.NET --- Janrain Project}
+\color{darkgray}
+"Super Savvy Me" web application for selling P\&G brand products. 4-person team (Kanban).
+\begin{itemize}
+  \item Developed new features.
+  \item Performed code reviews and deployments.
+  \item Configured the Sitecore 9 CMS back-office.
+  \item Carried out unit and integration testing.
+\end{itemize}
+\textit{Tech Stack:} C\#, ASP.NET MVC 5, MS SQL Server 2012, Git, Sitecore 9 CMS, Entity Framework.
+
+\vspace{6pt}
+
+\subsection*{Backend Developer PHP --- Objective Pose Project}
+\color{darkgray}
+Web application for assessing customers' flooring-installation skills (with various options). At the end of the process, a summary and recommendation are provided based on skill level. 4-person team (Kanban).
+\begin{itemize}
+  \item Analyzed API specifications.
+  \item Developed a RESTful web API.
+  \item Contributed to technical decisions.
+  \item Developed the back-office UI (React JS).
+  \item Performed code reviews and deployments.
+  \item Wrote technical documentation.
+\end{itemize}
+\textit{Tech Stack:} PHP, Slim Framework, MariaDB, RESTful API, Git, Jira, Confluence.
+
+\vspace{6pt}
+
+\subsection*{Backend Developer PHP --- Krug Project}
+\color{darkgray}
+Commercial web application for selling Krug champagne. 4-person team (Kanban).
+\begin{itemize}
+  \item Developed custom modules for the Drupal 7 CMS.
+  \item Developed, maintained, and tested REST API services.
+  \item Performed code reviews and deployments.
+  \item Wrote technical documentation.
+\end{itemize}
+\textit{Tech Stack:} PHP, Drupal 7, MySQL, Git, Jenkins, Jira, Confluence.
+
+\vspace{6pt}
+
+\subsection*{Backend Developer Node.js --- Kaufman \& Broad Patrimoine Project}
+\color{darkgray}
+B2B web application for Kaufman \& Broad Patrimoine. 8-person team (Kanban).
+\begin{itemize}
+  \item Developed the frontend user interface.
+  \item Performed code reviews and deployments.
+  \item Carried out unit and integration testing.
+\end{itemize}
+\textit{Tech Stack:} Node.js, Gulp, SASS, Pug, JavaScript, Git, Jira, Confluence.
+
+\vspace{10pt}
+
+\noindent\textcolor{primary}{ \faBuilding\ Vinatech} \quad
+\textit{ \small \textcolor{darkgray}{ \faMapMarker\ } Madagascar } \hfill
+\textit{ \small \textcolor{darkgray}{ \faCalendar\ } July 2014 -- August 2016 }
+
+\vspace{4pt}
+
+\subsection*{R\&D Engineer and Co-founder --- Fleet Management Project}
+\color{darkgray}
+Web and mobile application enabling vehicle tracking. 3-person team.
+\begin{itemize}
+  \item Designed digital products.
+  \item Developed the web interface.
+  \item Developed sockets to receive GPS data.
+  \item Built electronic prototypes.
+  \item Wrote technical documentation.
+  \item Prospected local customers.
+\end{itemize}
+\textit{Tech Stack:} Java, Tomcat, Java Socket, Git, PIC microcontroller, C/C++.
+
+\vspace{10pt}
+
+\noindent\textcolor{primary}{ \faBuilding\ Neuroscience Laboratory} \quad
+\textit{ \small \textcolor{darkgray}{ \faMapMarker\ } Madagascar }
+
+\vspace{4pt}
+
+\subsection*{R\&D Consultant Engineer --- EEG Project}
+\color{darkgray}
+Web application for semi-automatic processing of EEG signals. 3-person team.
+\begin{itemize}
+  \item Designed digital products.
+  \item Developed the web interface.
+  \item Built electronic prototypes.
+\end{itemize}
+\textit{Tech Stack:} Python, WordPress CMS, Machine Learning.
+
+\vspace{14pt}
+
+% ================== EDUCATION / LANGUAGES / SKILLS (2 columns) ==================
+\setlength{\tabcolsep}{0pt}
+\begin{tabularx}{\textwidth}{
+  >{\raggedright\arraybackslash}X
+  @{\hspace{1cm}}
+  >{\raggedright\arraybackslash}p{0.32\textwidth}
+}
+\begin{minipage}[t]{\linewidth}
+\section*{EDUCATION}
+
+\textbf{Engineering Degree in Automation Electronics and Computer Science}\\
+\textcolor{primary}{ \faGraduationCap\ École Supérieure Polytechnique d'Antananarivo} \quad
+\textit{ \small \textcolor{darkgray}{ \faMapMarker\ } Madagascar } \hfill  \textit{ \small \textcolor{darkgray}{ \faCalendar\ } 2014 }
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}
+
+\section*{LANGUAGES}
+
+\begin{itemize}
+  \item French --- Native
+  \item English --- Professional
+\end{itemize}
+
+\section*{SKILLS}
+
+\textbf{\color{primary} Full-Stack Development}\\
+\color{darkgray} C\#, .NET 10, Angular 21, React.js, TypeScript, Next.js, Node.js
+
+\vspace{4pt}
+
+\textbf{\color{primary} AI \& Machine Learning}\\
+\color{darkgray} LLM, RAG (Retrieval-Augmented Generation), Fine-tuning (LoRA, QLoRA), Multimodal Models, Python, pgvector
+
+\vspace{4pt}
+
+\textbf{\color{primary} Architecture \& Methods}\\
+\color{darkgray} Clean Architecture, DDD, Microservices, MVC, SOLID, Agile (Scrum, Kanban), TDD
+
+\vspace{4pt}
+
+\textbf{\color{primary} Databases}\\
+\color{darkgray} MS SQL Server, PostgreSQL, DynamoDB, Entity Framework, MariaDB, MySQL, Oracle PL/SQL
+
+\vspace{4pt}
+
+\textbf{\color{primary} DevOps \& Cloud}\\
+\color{darkgray} Azure (PaaS/IaaS), AWS, Azure DevOps, CI/CD, Docker, Terraform, Jenkins, GitHub Actions, Datadog
+
+\vspace{4pt}
+
+\end{minipage}
+\\
+\end{tabularx}
+
+\end{document}
